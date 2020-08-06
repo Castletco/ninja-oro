@@ -7,7 +7,7 @@ export default {
     clickFarm() {
         this.quantity.aux = Math.floor(Math.random() * 11) + 10;  // returns a random integer from 10 to 20
         this.quantity.gold += this.quantity.aux;
-        this.quantity.text += `Earned ${aux} golds from the Farm! ()`
+        this.quantity.text = `Earned ${this.quantity.aux} golds from the Farm!`;
     },
     clickCave() {
         this.quantity.gold += Math.floor(Math.random() * 6) + 5;  // returns a random integer from 5 to 10;

@@ -1,8 +1,8 @@
 <template>
   <b-container>
-    <b-nav small>
-      <b-nav-item active>Ninja Gold</b-nav-item>
-    </b-nav>
+    <b-navbar toggleable type="light" variant="light">
+      <b-navbar-brand href="#">Ninja Gold</b-navbar-brand>
+    </b-navbar>
     <div>
       <div class="mt-2">Your Gold: {{ gold }}</div>
     </div>
@@ -43,11 +43,13 @@ export default {
   name: 'HelloWorld',
   props: {
     gold: Number,
-    text: String
+    text: String,
+    aux: Number
   },
   methods: {
     clickFarm() {
       store.clickFarm();
+      console.log(store.quantity.text);
     },
     clickCave() {
       store.clickCave();
