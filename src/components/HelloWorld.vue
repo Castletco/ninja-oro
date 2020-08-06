@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-navbar toggleable type="light" variant="light">
-      <b-navbar-brand href="#">Ninja Gold</b-navbar-brand>
+      <b-navbar-brand href="#">Ninja</b-navbar-brand>
     </b-navbar>
     <div>
       <div class="mt-2">Your Gold: {{ gold }}</div>
@@ -24,14 +24,20 @@
         <b-button @click="clickCasino()" variant="primary">Find Gold!</b-button>
       </b-card>
     </b-card-group>
-    <label for="textarea">Activities:</label>
-    <b-form-textarea
-      id="textarea"
-      :text="text"
-      placeholder="Enter something..."
-      rows="3"
-      max-rows="6"
-    ></b-form-textarea>
+    <b-row>
+      <b-col sm="1">
+        <label for="textarea">Activities:</label>
+      </b-col>
+      <b-col sm="10">
+        <b-form-textarea
+          id="textarea"
+          text="text"
+          placeholder="Enter something..."
+          rows="3"
+          max-rows="6"
+        ></b-form-textarea>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -53,12 +59,15 @@ export default {
     },
     clickCave() {
       store.clickCave();
+      console.log(store.quantity.text);
     },
     clickHouse() {
       store.clickHouse();
+      console.log(store.quantity.text);
     },
     clickCasino() {
       store.clickCasino();
+      console.log(store.quantity.text);
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld :gold="gold"/>
+    <HelloWorld :gold="gold" :text="text" />
   </div>
 </template>
 
