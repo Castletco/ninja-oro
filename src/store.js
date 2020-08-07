@@ -1,6 +1,4 @@
 export default {
-    const date = new Date('2010-08-05');
-    
     quantity: {
         gold: 0,
         aux: 0,
