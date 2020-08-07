@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-navbar toggleable type="light" variant="light">
-      <b-navbar-brand href="#">Ninja</b-navbar-brand>
+      <b-navbar-brand href="#">Ninja-Gold</b-navbar-brand>
     </b-navbar>
     <div>
       <div class="mt-2">Your Gold: {{ gold }}</div>
@@ -31,11 +31,11 @@
       <b-col sm="10">
         <b-form-textarea
           id="textarea"
-          text="text"
           placeholder="Enter something..."
+          v-model="text"
           rows="3"
           max-rows="6"
-        ></b-form-textarea>
+        >{{text}}</b-form-textarea>
       </b-col>
     </b-row>
   </b-container>
