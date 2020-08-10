@@ -28,7 +28,7 @@
       <b-col sm="1">
         <label for="textarea">Activities:</label>
       </b-col>
-      <b-col sm="10">
+      <b-col sm="11">
         <b-form-textarea
           id="textarea"
           placeholder="Enter something..."
@@ -37,6 +37,11 @@
           max-rows="6"
         >{{text}}</b-form-textarea>
       </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="12">
+        <b-button @click="reset()">Reset</b-button>
+      </b-col>      
     </b-row>
   </b-container>
 </template>
@@ -55,19 +60,19 @@ export default {
   methods: {
     clickFarm() {
       store.clickFarm();
-      console.log(store.quantity.text);
     },
     clickCave() {
       store.clickCave();
-      console.log(store.quantity.text);
     },
     clickHouse() {
       store.clickHouse();
-      console.log(store.quantity.text);
     },
     clickCasino() {
       store.clickCasino();
-      console.log(store.quantity.text);
+    },
+    reset() {
+      window.confirm("Estas seguro que deseas reiniciar el juego?, Perderás todo el avance");
+      store.reset();
     }
   }
 }

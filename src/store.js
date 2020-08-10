@@ -37,5 +37,10 @@ export default {
         }
         this.quantity.gold += this.quantity.aux;
         this.quantity.aux = 0;     
+    },
+    reset() {
+        this.quantity.aux = 0;
+        this.quantity.gold = 0;
+        this.quantity.text = '';
     }
 };
