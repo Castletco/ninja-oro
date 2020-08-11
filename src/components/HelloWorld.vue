@@ -4,7 +4,8 @@
       <b-navbar-brand href="#">Ninja-Gold</b-navbar-brand>
     </b-navbar>
     <div>
-      <div class="mt-2">Your Gold: {{ gold }}</div>
+      <div id="goldTag">Your Gold:</div>
+      <span :class="{green: gold > 0, red: gold < 0}">{{ gold }}</span>
     </div>
     <b-card-group deck>
       <b-card title="Farm" >
@@ -55,19 +56,15 @@ export default {
   methods: {
     clickFarm() {
       store.clickFarm();
-      console.log(store.quantity.text);
     },
     clickCave() {
       store.clickCave();
-      console.log(store.quantity.text);
     },
     clickHouse() {
       store.clickHouse();
-      console.log(store.quantity.text);
     },
     clickCasino() {
       store.clickCasino();
-      console.log(store.quantity.text);
     }
   }
 }
@@ -88,5 +85,17 @@ li {
 }
 a {
   color: #6b2db3;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+span {
+  display: inline-block;
+}
+#goldTag {
+  display: inline-block
 }
 </style>
